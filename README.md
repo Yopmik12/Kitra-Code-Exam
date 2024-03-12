@@ -35,3 +35,5 @@ info: Listening to port 3000
 # run docker container in development mode
 docker-compose up --build
 ```
+
+> Note: Wait for creation of database, migration and seed before requesting. 
