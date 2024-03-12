@@ -4,7 +4,7 @@ const { sequelize } = require('../models');
 const getAllTreasuresData = async () => {
   try {
     const query = `
-      SELECT treasures.id, treasures.latitude, treasures.longtitude, treasures.name, GROUP_CONCAT(money_values.amt) AS amt
+      SELECT treasures.id, treasures.latitude, treasures.longitude, treasures.name, GROUP_CONCAT(money_values.amt) AS amt
       FROM treasures
       INNER JOIN money_values ON treasures.id = money_values.treasure_id
       GROUP BY treasures.id;

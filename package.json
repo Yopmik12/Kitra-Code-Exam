@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --legacy-watch src",
-    "dev:docker": "NODE_ENV=docker nodemon --legacy-watch src",
+    "dev": "npx nodemon --legacy-watch src",
+    "dev:docker": "NODE_ENV=docker npx nodemon --legacy-watch src",
     "db:migrate": "sequelize-cli db:migrate",
     "db:seed": "sequelize-cli db:seed:all",
     "db:g:seed": "sequelize-cli seed:generate --name",
@@ -17,7 +17,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "sequelize-cli": "^6.6.2"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

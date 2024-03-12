@@ -4,9 +4,9 @@ const findTreasureBoxes = (queryObj, treasures) => {
   return treasures.filter((treasure) => {
     const treasureDistance = calculateDistance(
       queryObj.latitude,
-      queryObj.longtitude,
+      queryObj.longitude,
       treasure.latitude,
-      treasure.longtitude,
+      treasure.longitude,
     );
 
     return treasureDistance <= queryObj.distance;

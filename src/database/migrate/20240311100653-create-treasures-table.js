@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.DECIMAL(10, 8),
         allowNull: false,
       },
-      longtitude: {
+      longitude: {
         type: Sequelize.DECIMAL(11, 8),
         allowNull: false,
       },

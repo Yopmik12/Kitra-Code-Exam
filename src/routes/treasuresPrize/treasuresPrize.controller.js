@@ -12,7 +12,7 @@ const treasurePrizeController = async (req, res) => {
     const query = req.query;
     const convertedQuery = {
       latitude: convertToFloat(query.latitude),
-      longtitude: convertToFloat(query.longtitude),
+      longitude: convertToFloat(query.longitude),
       distance: convertToNum(query.distance),
       minPrizeValue: convertToNum(query.minPrizeValue) || null,
       maxPrizeValue: convertToNum(query.maxPrizeValue) || null,
