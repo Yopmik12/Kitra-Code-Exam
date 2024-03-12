@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  kitra-app:
+    build: .
+    ports:
+      - 3000:3000
+    depends_on:
+      - database
+    volumes:
+      - ./:/app
+
+  database:
+    image: mysql:latest
+    container_name: kitra-code-exam-database-1
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: kitra_db
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  db-setup:
+    build: .
+    environment:
+      - NODE_ENV=docker
+    depends_on:
+      - database
+    command: sh -c "sleep 12 && npm run db:create && npm run db:migrate && npm run db:seed"
+
+volumes:
+  mysql_data:

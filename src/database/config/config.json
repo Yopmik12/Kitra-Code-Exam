@@ -1,0 +1,18 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "kitra_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
+  },
+  "docker": {
+    "username": "root",
+    "password": "rootpassword",
+    "database": "kitra_db",
+    "host": "kitra-code-exam-database-1",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+}
