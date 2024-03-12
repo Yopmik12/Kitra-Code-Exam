@@ -11,7 +11,7 @@
 
 #### C. Running migrations
 I'm using Sequelize migration
-> Note: -- Edit Credentials in `src/config/config.json` for your root mysql connection
+> Note: -- Edit Credentials in `src/database/config/config.json` for your root mysql connection
 
 ``` sh
 "development": {
