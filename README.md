@@ -10,7 +10,19 @@
 1. ```npm install```
 
 #### C. Running migrations
-Notes: I'm using Sequelize migration
+I'm using Sequelize migration
+> Note: -- Edit Credentials in `src/config/config.json` for your root mysql connection
+
+``` sh
+"development": {
+    "username": "root",
+    "password": null,
+    "database": "kitra_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
+  }
+```
 1. ```npm run db:create```
 2. ```npm run db:migrate```
 3. ```npm run db:seed```
