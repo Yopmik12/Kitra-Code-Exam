@@ -4,7 +4,7 @@
 
 #### A. Pre requisites to run locally without docker
 1. mysql
-2. NPM/ Node 20.X
+2. NPM / Node 20.X
 
 #### B. Install all dependencies locally
 1. ```npm install```
@@ -42,10 +42,14 @@ info: Listening to port 3000
 
 ## Prerequisite with Docker ( `recommended` )
 
-#### A.  Install all dependencies locally
+#### A. Pre requisites to run locally with docker
+1. NPM
+2. Docker Desktop
+
+#### B.  Install all dependencies locally
 1. ```npm install```
   
-#### B.  run locally with docker
+#### C.  run locally with docker
 ``` sh
 # run docker container in development mode
 docker-compose up --build
@@ -54,7 +58,7 @@ docker-compose up --build
 docker-compose down -v
 ```
 
-> Note: Wait for creation of database, migration and seed before requesting. Please make use all ports are available (3000, 3306)
+> Note: Wait for creation of database, migration and seed before requesting. Please make sure all ports are available (3000, 3306)
 
 ## API specifications
 
