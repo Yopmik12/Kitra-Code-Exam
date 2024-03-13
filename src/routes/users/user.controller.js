@@ -5,10 +5,16 @@ const { getUserData, updateUserData } = require('../../service/users.service');
 const getUserController = async (req, res) => {
   try {
     const username = req.query.name;
-    const response = (await getUserData(username)) ?? { message: 'No User Found' };
+    let response = await getUserData(username);
+    let code = httpStatus.OK;
 
-    res.send({
-      code: httpStatus.OK,
+    if (!response) {
+      response = { message: 'No User Found' };
+      code = httpStatus.BAD_REQUEST;
+    }
+
+    res.status(code).send({
+      code,
       response,
     });
   } catch (err) {
@@ -25,9 +31,14 @@ const updateUserController = async (req, res) => {
   try {
     const query = req.body;
     const response = await updateUserData(query);
+    let code = httpStatus.OK;
 
-    res.send({
-      code: httpStatus.OK,
+    if (response.message) {
+      code = httpStatus.BAD_REQUEST;
+    }
+
+    res.status(code).send({
+      code,
       response,
     });
   } catch (err) {

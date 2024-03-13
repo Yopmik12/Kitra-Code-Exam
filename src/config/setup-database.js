@@ -7,6 +7,7 @@ async function createDatabase() {
   const sequelize = new Sequelize('', config.username, config.password, {
     host: config.host,
     dialect: config.dialect,
+    port: config.port,
   });
 
   try {
