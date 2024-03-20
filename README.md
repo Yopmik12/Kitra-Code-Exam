@@ -356,3 +356,10 @@ components:
 ```
 
 </details>
+
+
+## Postman Collection
+
+####  Included the postman collection in root directory
+
+```Kitra Endpoint.postman_collection.json```

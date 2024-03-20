@@ -8,10 +8,10 @@
     "dev:docker": "NODE_ENV=docker npx nodemon --legacy-watch src",
     "db:migrate": "sequelize-cli db:migrate",
     "db:seed": "sequelize-cli db:seed:all",
+    "db:create": "node src/config/setup-database.js",
     "db:g:seed": "sequelize-cli seed:generate --name",
     "db:g:migration": "sequelize-cli migration:generate --name",
-    "db:migrate:undoAll": "sequelize-cli db:migrate:undo:all",
-    "db:create": "node src/config/setup-database.js"
+    "db:migrate:undoAll": "sequelize-cli db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",

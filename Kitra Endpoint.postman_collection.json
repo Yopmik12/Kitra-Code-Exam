@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "ea94fb23-327c-4b24-b25d-0b4e6e7a7e66",
+		"name": "Kitra Endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19008697"
+	},
+	"item": [
+		{
+			"name": "Treasures",
+			"item": [
+				{
+					"name": "Get Treasures",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/treasures?latitude=14.54376481&longitude=121.01991170&distance=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"treasures"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "14.54376481"
+								},
+								{
+									"key": "longitude",
+									"value": "121.01991170"
+								},
+								{
+									"key": "distance",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Treasure Prize",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/treasures/prize?latitude=14.54376481&longitude=121.01991170&distance=1&minPrizeValue=10&maxPrizeValue=30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"treasures",
+								"prize"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "14.54376481"
+								},
+								{
+									"key": "longitude",
+									"value": "121.01991170"
+								},
+								{
+									"key": "distance",
+									"value": "1"
+								},
+								{
+									"key": "minPrizeValue",
+									"value": "10"
+								},
+								{
+									"key": "maxPrizeValue",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user?name=U1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "U1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"U1\",\r\n  \"age\": 32,\r\n  \"password\": \"12355555\",\r\n  \"email\": \"test@valid.com\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
